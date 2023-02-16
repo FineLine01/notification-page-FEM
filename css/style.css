@@ -1,2 +1,181 @@
 .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/*Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*Remove default margin */
+body,
+h1,
+h2,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Body default */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* "a" elements that don't have a class get default style */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Images properties to make easier to adjust later */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Variables */
+
+:root {
+
+    --clr-primary-400: hsl(1, 90%, 64%);
+    --clr-primary-700: hsl(219, 85%, 26%);
+
+    --clr-neutral-000: hsl(0, 0%, 100%);
+    --clr-neutral-100: hsl(210, 60%, 98%);
+    --clr-neutral-200: hsl(211, 68%, 94%);
+    --clr-neutral-300: hsl(205, 33%, 90%);
+    --clr-neutral-400: hsl(219, 14%, 63%);
+    --clr-neutral-700: hsl(219, 12%, 42%);
+    --clr-neutral-900: hsl(224, 21%, 14%);
+
+    --base-size: 16px;
+    --ff: 'Plus Jakarta Sans', sans-serif;
+
+    /* 3:4 <-> 1.125*/
+    --scale-90: calc(var(--base-size)*0.624);
+    --scale-100: calc(var(--base-size)*0.702);
+    --scale-200: calc(var(--base-size)*0.79);
+    --scale-300: calc(var(--base-size)*0.889);
+    --scale-400: var(--base-size);
+    --scale-500: calc(var(--base-size)*1.125);
+    --scale-600: calc(var(--base-size)*1.266);
+    --scale-700: calc(var(--base-size)*1.424);
+    --scale-800: calc(var(--base-size)*1.602);
+    --scale-900: calc(var(--base-size)*1.802);
+    --scale-1000: calc(var(--base-size)*2.027);
+    --scale-1100: calc(var(--base-size)*2.281);
+    --scale-1200: calc(var(--base-size)*2.566);
+    --scale-1300: calc(var(--base-size)*2.887);
+    --scale-1400: calc(var(--base-size)*3.247);
+    --scale-1500: calc(var(--base-size)*3.653);
+    --scale-1600: calc(var(--base-size)*4.11);
+
+    /* font size */
+    --fs-90: var(--scale-90);
+    --fs-100: var(--scale-100);
+    --fs-100: var(--scale-100);
+    --fs-200: var(--scale-200);
+    --fs-300: var(--scale-300);
+    --fs-400: var(--scale-400);
+    --fs-500: var(--scale-500);
+    --fs-600: var(--scale-600);
+    --fs-700: var(--scale-700);
+    --fs-800: var(--scale-800);
+    --fs-900: var(--scale-900);
+    --fs-1000: var(--scale-1000);
+    --fs-1100: var(--scale-1100);
+    --fs-1200: var(--scale-1200);
+    --fs-1300: var(--scale-1300);
+    --fs-1400: var(--scale-1400);
+    --fs-1500: var(--scale-1500);
+    --fs-1600: var(--scale-1600);
+
+    /* font weight */
+    /* --fw-400: 400; */
+    --fw-500: 500;
+    /* --fw-600: 600; */
+    /* --fw-700: 700; */
+    --fw-800: 800;
+
+    /* --br-sm: 36em;
+    --br-md: 48em;
+    --br-lg: 62em; */
+
+}
+
+/* Composition */
+body {
+    color: var(--clr-neutral-700);
+    background-color: var(--clr-neutral-000);
+    font-family: var(--ff);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-500);
+    padding: 1.25em;
+    max-width: 45em;
+    display: grid;
+    place-content: center;
+    margin-inline: auto;
+}
+
+h1 {
+    color: var(--clr-neutral-900);
+    font-size: var(--fs-600);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+/* */
